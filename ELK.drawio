@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-30T05:08:10.022Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15" etag="m9op03PlsVK8vF8bYCBO" version="13.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-30T05:09:58.179Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15" etag="60MRwCMzpGIf4FGGwYnQ" version="13.8.5" type="github">
   <diagram id="_dvkM-Z6IW51VZn25M04" name="Page-1">
     <mxGraphModel dx="1026" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -94,14 +94,11 @@
         <mxCell id="RkMdZwRdzVDmLsqv5lqF-45" value="&lt;h5&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Web-3&lt;/font&gt;&lt;/h5&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="RkMdZwRdzVDmLsqv5lqF-30" vertex="1">
           <mxGeometry x="530" y="647" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="RkMdZwRdzVDmLsqv5lqF-46" value="&lt;h5&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;JumpBox&lt;/font&gt;&lt;/h5&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="RkMdZwRdzVDmLsqv5lqF-30" vertex="1">
-          <mxGeometry x="183" y="520" width="40" height="20" as="geometry" />
+        <mxCell id="RkMdZwRdzVDmLsqv5lqF-46" value="&lt;h5&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;JumpBox&lt;/font&gt;&lt;/h5&gt;&lt;div&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;VM&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="RkMdZwRdzVDmLsqv5lqF-30" vertex="1">
+          <mxGeometry x="183" y="527" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="RkMdZwRdzVDmLsqv5lqF-49" value="&lt;h4&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Load Balancer Backend Pool&lt;/font&gt;&lt;/h4&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="RkMdZwRdzVDmLsqv5lqF-30" vertex="1">
           <mxGeometry x="330" y="755" width="213" as="geometry" />
-        </mxCell>
-        <mxCell id="RkMdZwRdzVDmLsqv5lqF-81" value="10.0.0.7" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="RkMdZwRdzVDmLsqv5lqF-30" vertex="1">
-          <mxGeometry x="183" y="550" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="RkMdZwRdzVDmLsqv5lqF-82" value="10.0.0.8" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="RkMdZwRdzVDmLsqv5lqF-30" vertex="1">
           <mxGeometry x="293" y="674" width="40" height="20" as="geometry" />
