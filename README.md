@@ -81,6 +81,16 @@ These Beats allow us to collect the following information from each machine:
 
 **Metricbeat** : Monitors the system metrics of your network such as CPU/RAM statistics, collects data on SSH login attempts, and failed sudo escalations
 
+### Using Playbook
+
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned. 
+
+SSH into the control node and follow the steps below:
+
+* Copy the .yml files to `/etc/ansible` directory 
+* Update the hosts file to be as follows. This will assign the VM servers to their server groups for the Ansible Playbooks 
+
+
 
 
 
