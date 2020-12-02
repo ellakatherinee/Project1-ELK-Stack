@@ -39,4 +39,25 @@ The configuration details of each machine may be found below:
 ### Access Polices 
 The machines within the internal network are not exposed to the public 
 
-Only the Jump Box can accept connections from the internet. Access to this machine 
+Only the Jump Box can accept connections from the internet via port 22/SSH. Access to this machine is allowed from a designated IP address that has been given permission within the network security group. If you're happening to work from more than one IP address (like myself) then you need to adjust your security rules for what IP addresses are allowed. 
+
+Machines within the network can only be accessed by each other. The user can only access the Web Servers and ELK Server only through the Jump Box by connecting to them via port 22/SSH. The data that is collected from the Web Servers gets sent to the ELK server for indexing. 
+
+A summary of the access policies in place can be found in the table below.
+| Name | Publicly Acessible | Allowed IP Address |
+|:------:|:---------:|:----------:|
+|Jump-Box| Yes |? | 
+|Web 1| No |? |
+|Web 2| No |?|
+|Web 3| No |?|
+|ELK-Server1|No|?| 
+
+### ELK Configuration 
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it greatly reduces the chance of human error over the course of potentially configuring thousands of machines.
+
+The playbook implements the following tasks:
+* Install docker on all network machines so they will be able to recieve and install containers 
+* Installing ansible on the Jump Box allows for the distribution of containers on the other web servers 
+* Ansible playbooks are used to install the Elk stack container on the Elk server and "Beats" containers on the web servers 
+
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
