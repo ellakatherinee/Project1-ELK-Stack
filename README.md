@@ -60,4 +60,28 @@ The playbook implements the following tasks:
 * Installing ansible on the Jump Box allows for the distribution of containers on the other web servers 
 * Ansible playbooks are used to install the Elk stack container on the Elk server and "Beats" containers on the web servers 
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+The following screenshot displays the result of running `docker ps` after successfully configuring the [ELK](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Ansible/install-elk.yml) instance.
+ 
+![alt text](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Diagrams/Docker-ELK.jpeg "Docker")
+
+### Target Machine & Beats
+ELK server monitors the following machines: 
+* Web 1: 10.0.0.8
+* Web 2: 10.0.0.9
+* Web 3: 10.0.0.10
+
+Filebeat/Metricbeat are on the following machines:
+* Web 1: 10.0.0.8
+* Web 2: 10.0.0.9
+* Web 3: 10.0.0.10
+
+These Beats allow us to collect the following information from each machine:
+
+**Filebeat** : Monitors log data in specified locations. It collects log events, and changes to the system 
+
+**Metricbeat** : Monitors the system metrics of your network such as CPU/RAM statistics, collects data on SSH login attempts, and failed sudo escalations
+
+
+
+
+  
