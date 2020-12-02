@@ -23,4 +23,20 @@ Load balancing ensures that the application will be highly available, in additio
   * The Jump Box is only acessible via port 22. It is a great tool used by an administrator to perform tasks on the network. 
   
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the filesystem and system metrics. ELK is great for those who are visual learners,it allows for whomever to easily understand the basic mechanics of what log data looks like  
-  * Filebeat monitors log data in specified locations. 
+  * Filebeat monitors log data in specified locations. It collects log events, and forwards them to Elastisearch or Logstash for indexing. 
+  * Metricbeat monitors the system metrics of your network, and forwards the data to Elastisearch 
+
+The configuration details of each machine may be found below: 
+| Name | Function | IP Address | Operating System |
+|:------:|:---------:|:----------:|:----------------:|
+|Jump-Box| Gateway | ? | Linux | 
+|Web 1| Server |10.0.0.8|Linux|
+|Web 2| Server |10.0.0.9|Linux|
+|Web 3| Server |10.0.0.10|Linux|
+|ELK-Server1|Log Server|10.1.0.4|Linux| 
+
+
+### Access Polices 
+The machines within the internal network are not exposed to the public 
+
+Only the Jump Box can accept connections from the internet. Access to this machine 
