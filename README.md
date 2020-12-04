@@ -29,7 +29,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below: 
 | Name | Function | IP Address | Operating System |
 |:------:|:---------:|:----------:|:----------------:|
-|Jump-Box| Gateway | ? | Linux | 
+|Jump-Box| Gateway |Host Machine IP Address/10.0.0.4 | Linux | 
 |Web 1| Server |10.0.0.8|Linux|
 |Web 2| Server |10.0.0.9|Linux|
 |Web 3| Server |10.0.0.10|Linux|
@@ -46,11 +46,11 @@ Machines within the network can only be accessed by each other. The user can onl
 A summary of the access policies in place can be found in the table below.
 | Name | Publicly Acessible | Allowed IP Address |
 |:------:|:---------:|:----------:|
-|Jump-Box| Yes |? | 
-|Web 1| No |? |
-|Web 2| No |?|
-|Web 3| No |?|
-|ELK-Server1|No|?| 
+|Jump-Box| Yes |Host Machine IP Address/10.0.0.4| 
+|Web 1| No |10.0.0.4|
+|Web 2| No |10.0.0.4|
+|Web 3| No |10.0.0.4|
+|ELK-Server1|No|10.0.0.4| 
 
 ### ELK Configuration 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it greatly reduces the chance of human error over the course of potentially configuring thousands of machines.
@@ -83,27 +83,27 @@ These Beats allow us to collect the following information from each machine:
 
 ### Using Playbook
 
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned. 
+In order to use the playbook, you will need to have an [Ansible](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Linux/ansible) control node already configured. Assuming you have such a control node provisioned. 
 
 SSH into the control node and follow the steps below:
 
 * Copy the .yml files to `/etc/ansible` directory 
-* Update the hosts  file to be as follows. This will assign the VM servers to their server groups for the Ansible Playbooks 
+* Update the [Hosts](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Linux/hosts) file to be as follows. This will assign the VM servers to their server groups for the Ansible Playbooks
 
 ```
      [webservers]
-       10.0.0.5
-       10.0.0.6
-       10.0.0.7
+       10.0.0.8
+       10.0.0.9
+       10.0.0.10
      [elkservers]
        10.1.0.4
 ```
-* To configure ELK, Filebeat,and Metricbeat run the following commands:
+* To configure ELK, Filebeat, and Metricbeat run the following commands:
 ```
 cd /etc/ansible
 ansible-playbook elk-playbook.yml
 ansible-playbook filebeat-playbook.yml
 ansible-playbook metricbeat-playbook.yml 
 ````
-* Lastly, if configured correctly navigate to: `curl http://10.0.0.8:5601` this is Kibana's web address. 
+* Lastly, if configured correctly navigate to: `curl http://10.0.0.8:5601` this is Kibana's web address 
   
