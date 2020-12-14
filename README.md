@@ -20,11 +20,11 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
  * Load Balancers allow for an extra layer of security protection for web servers by shifting tasks and resources for optimal use. DDos attacks are reduced by traffic that is being distributed  
-  * The Jump Box is only acessible via port 22. It is a great tool used by an administrator to perform tasks on the network. 
+  * The Jump Box is only accessible via port 22. It is a great tool used by an administrator to perform tasks on the network. 
   
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the filesystem and system metrics. ELK is great for those who are visual learners,it allows for whomever to easily understand the basic mechanics of what log data looks like  
-  * Filebeat monitors log data in specified locations. It collects log events, and forwards them to Elastisearch or Logstash for indexing. 
-  * Metricbeat monitors the system metrics of your network, and forwards the data to Elastisearch 
+  * Filebeat monitors log data in specified locations. It collects log events, and forwards them to Elasticsearch or Logstash for indexing. 
+  * Metricbeat monitors the system metrics of your network, and forwards the data to Elasticsearch 
 
 The configuration details of each machine may be found below: 
 | Name | Function | IP Address | Operating System |
@@ -36,7 +36,7 @@ The configuration details of each machine may be found below:
 |ELK-Server1|Log Server|10.1.0.4|Linux| 
 
 
-### Access Polices 
+### Access Policies 
 The machines within the internal network are not exposed to the public 
 
 Only the Jump Box can accept connections from the internet via port 22/SSH. Access to this machine is allowed from a designated IP address that has been given permission within the network security group. If you're happening to work from more than one IP address (like myself) then you need to adjust your security rules for what IP addresses are allowed. 
@@ -44,7 +44,7 @@ Only the Jump Box can accept connections from the internet via port 22/SSH. Acce
 Machines within the network can only be accessed by each other. The user can only access the Web Servers and ELK Server only through the Jump Box by connecting to them via port 22/SSH. The data that is collected from the Web Servers gets sent to the ELK server for indexing. 
 
 A summary of the access policies in place can be found in the table below.
-| Name | Publicly Acessible | Allowed IP Address |
+| Name | Publicly Accessible | Allowed IP Address |
 |:------:|:---------:|:----------:|
 |Jump-Box| Yes |Host Machine IP Address/10.0.0.4| 
 |Web 1| No |10.0.0.4|
@@ -56,11 +56,11 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it greatly reduces the chance of human error over the course of potentially configuring thousands of machines.
 
 The playbook implements the following tasks:
-* Install docker on all network machines so they will be able to recieve and install containers 
+* Install docker on all network machines so they will be able to receive and install containers 
 * Installing ansible on the Jump Box allows for the distribution of containers on the other web servers 
 * Ansible playbooks are used to install the Elk stack container on the Elk server and "Beats" containers on the web servers 
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the [ELK](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Ansible/install-elk.yml) instance.
+The following screenshot displays the result of running `docker ps` after successfully configuring an [Ansible](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Linux/ansible) instance on the [ELK](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Ansible/install-elk.yml) server. 
  
 ![alt text](https://github.com/ellakatherinee/super-duper-guacamole/blob/main/Diagrams/Docker-ELK.jpeg "Docker")
 
@@ -94,7 +94,7 @@ SSH into the control node and follow the steps below:
      [webservers]
        10.0.0.8
        10.0.0.9
-       10.0.0.10
+       10.0.0.10 
      [elkservers]
        10.1.0.4
 ```
@@ -107,3 +107,4 @@ ansible-playbook metricbeat-playbook.yml
 ````
 * Lastly, if configured correctly navigate to: `curl http://10.0.0.8:5601` this is Kibana's web address 
   
+
